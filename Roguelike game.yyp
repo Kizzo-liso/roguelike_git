@@ -37,6 +37,7 @@
   "resources": [
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"spr_tile_estructures","path":"sprites/spr_tile_estructures/spr_tile_estructures.yy",},},
+    {"id":{"name":"OBJ_colisor","path":"objects/OBJ_colisor/OBJ_colisor.yy",},},
     {"id":{"name":"tile_gramas_chao","path":"sprites/tile_gramas_chao/tile_gramas_chao.yy",},},
     {"id":{"name":"tile_objetos_ambiente","path":"tilesets/tile_objetos_ambiente/tile_objetos_ambiente.yy",},},
     {"id":{"name":"tiles_chao_pedra","path":"tilesets/tiles_chao_pedra/tiles_chao_pedra.yy",},},
@@ -44,6 +45,7 @@
     {"id":{"name":"tile_grama_chao","path":"tilesets/tile_grama_chao/tile_grama_chao.yy",},},
     {"id":{"name":"OBJ_camera","path":"objects/OBJ_camera/OBJ_camera.yy",},},
     {"id":{"name":"tile_plantas","path":"tilesets/tile_plantas/tile_plantas.yy",},},
+    {"id":{"name":"spr_colisor","path":"sprites/spr_colisor/spr_colisor.yy",},},
     {"id":{"name":"spr_tile_walls","path":"sprites/spr_tile_walls/spr_tile_walls.yy",},},
     {"id":{"name":"OBJ_inimigo","path":"objects/OBJ_inimigo/OBJ_inimigo.yy",},},
     {"id":{"name":"tile_objetos","path":"sprites/tile_objetos/tile_objetos.yy",},},
