@@ -1,4 +1,6 @@
 /// @description variaveis iniciais do player
 // Você pode escrever seu código neste editor
-vida = 3;
-init_speed = 2.5;
+velh = 0;
+velv = 0;
+dir = 0;
+veloc = 3.0;
