@@ -30,6 +30,7 @@
     {"name":"spr_inimigo1","order":1,"path":"sprites/spr_inimigo1/spr_inimigo1.yy",},
     {"name":"obj_chao","order":2,"path":"objects/obj_chao/obj_chao.yy",},
     {"name":"spr_tile_plantas","order":3,"path":"sprites/spr_tile_plantas/spr_tile_plantas.yy",},
+    {"name":"spr_player_andando","order":3,"path":"sprites/spr_player_andando/spr_player_andando.yy",},
     {"name":"spr_tile_chao_pedra","order":6,"path":"sprites/spr_tile_chao_pedra/spr_tile_chao_pedra.yy",},
     {"name":"tile_structures","order":4,"path":"tilesets/tile_structures/tile_structures.yy",},
     {"name":"tile_walls","order":2,"path":"tilesets/tile_walls/tile_walls.yy",},
