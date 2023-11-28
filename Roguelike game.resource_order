@@ -19,5 +19,6 @@
   "ResourceOrderSettings": [
     {"name":"OBJ_inimigo","order":1,"path":"objects/OBJ_inimigo/OBJ_inimigo.yy",},
     {"name":"spr_inimigo1","order":1,"path":"sprites/spr_inimigo1/spr_inimigo1.yy",},
+    {"name":"obj_chao","order":2,"path":"objects/obj_chao/obj_chao.yy",},
   ],
 }
