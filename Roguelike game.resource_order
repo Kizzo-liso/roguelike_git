@@ -21,6 +21,8 @@
     {"name":"spr_tile_estructures","order":4,"path":"sprites/spr_tile_estructures/spr_tile_estructures.yy",},
     {"name":"tile_objetos_ambiente","order":1,"path":"tilesets/tile_objetos_ambiente/tile_objetos_ambiente.yy",},
     {"name":"tiles_chao_pedra","order":6,"path":"tilesets/tiles_chao_pedra/tiles_chao_pedra.yy",},
+    {"name":"Sprite10","order":1,"path":"sprites/Sprite10/Sprite10.yy",},
+    {"name":"OBJ_camera","order":3,"path":"objects/OBJ_camera/OBJ_camera.yy",},
     {"name":"tile_plantas","order":3,"path":"tilesets/tile_plantas/tile_plantas.yy",},
     {"name":"spr_tile_walls","order":2,"path":"sprites/spr_tile_walls/spr_tile_walls.yy",},
     {"name":"OBJ_inimigo","order":1,"path":"objects/OBJ_inimigo/OBJ_inimigo.yy",},
