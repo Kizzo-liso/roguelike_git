@@ -5,14 +5,15 @@ if object_exists(follow){
 	targety = follow.y;
 }
 
-//definindo a veloc da camera
+//definindo a veloc da camera 
 x += (targetx - x)/spd;
 y += (targety - y)/spd;
 
 
 //posicao da camera
-
-camera_set_view_pos(cam, x-w_half, y-h_half) //fara que a camera fique centralizada no player
+global.cmx = follow.x - w_half;
+global.cmy = follow.y - h_half;
+camera_set_view_pos(cam,global.cmx, global.cmy) //fara que a camera fique centralizada no player
 
 //definindo valor minimo e maximo da camera
 
