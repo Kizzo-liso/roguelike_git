@@ -22,6 +22,7 @@
     {"name":"tile_objetos_ambiente","order":1,"path":"tilesets/tile_objetos_ambiente/tile_objetos_ambiente.yy",},
     {"name":"tiles_chao_pedra","order":6,"path":"tilesets/tiles_chao_pedra/tiles_chao_pedra.yy",},
     {"name":"Sprite10","order":1,"path":"sprites/Sprite10/Sprite10.yy",},
+    {"name":"obj_dash","order":7,"path":"objects/obj_dash/obj_dash.yy",},
     {"name":"obj_Camera","order":3,"path":"objects/obj_Camera/obj_Camera.yy",},
     {"name":"tile_plantas","order":3,"path":"tilesets/tile_plantas/tile_plantas.yy",},
     {"name":"spr_filho_colisor","order":5,"path":"sprites/spr_filho_colisor/spr_filho_colisor.yy",},
