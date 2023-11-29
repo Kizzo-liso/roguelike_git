@@ -32,5 +32,14 @@ dir = point_direction(x,y,obj_player.x,obj_player.y); // inimigo vai perseguir o
 velv = lengthdir_y(veloc, dir);
 velh = lengthdir_x(veloc, dir);
 
-x += velh;
-y += velv;
+if(place_meeting(x+velh,y,OBJ_colisor)){
+		while(!place_meeting(x+sign(velh),y,OBJ_colisor)){
+		x+= sign(velh);}
+	velh = 0};
+	x +=velh;
+	
+		if(place_meeting(x,y+velv,OBJ_colisor)){
+		
+	velv = 0};
+	
+	y += velv;
