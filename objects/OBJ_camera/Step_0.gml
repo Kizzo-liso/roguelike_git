@@ -1,4 +1,4 @@
-
+ 
 //definindo quem a camera segue
 if object_exists(follow){
 	targetx = follow.x;
