@@ -1,22 +1,7 @@
-function scr_personagem_andando(){
-	/*movimentaçao do personagem*/
-	var _tecla_cima = keyboard_check(ord("W")) or keyboard_check(vk_up);
-	var _tecla_baixo = keyboard_check(ord("S")) or keyboard_check(vk_down);
-	var _tecla_esq = keyboard_check(ord("A")) or keyboard_check(vk_left);
-	var _tecla_dir = keyboard_check(ord("D")) or keyboard_check(vk_right);
-	var _tecla_dash =  keyboard_check(ord("Z")) or keyboard_check(vk_shift);
 
+#region COLISAO
+function scr_personagem_colisao(){
 
-	var _tecla_x = _tecla_dir -_tecla_esq;
-	var _tecla_y = _tecla_baixo - _tecla_cima;
-
-	 if _tecla_x != 0 or _tecla_y != 0{
-		 sprite_index = spr_player_andando
-
-		dir = point_direction(0,0,_tecla_x,_tecla_y);
-		velh = lengthdir_x(veloc,dir);
-		velv = lengthdir_y(veloc,dir);
-	
 		if(place_meeting(x+velh,y,OBJ_colisor)){
 			while(!place_meeting(x+sign(velh),y,OBJ_colisor)){
 			x+= sign(velh);}
@@ -28,6 +13,34 @@ function scr_personagem_andando(){
 		velv = 0};
 	
 		y += velv;
+
+}
+
+#endregion
+
+
+#region MOVIMENTACAO
+function scr_personagem_andando(){
+	/*movimentaçao do personagem*/
+	var _tecla_cima = keyboard_check(ord("W")) or keyboard_check(vk_up);
+	var _tecla_baixo = keyboard_check(ord("S")) or keyboard_check(vk_down);
+	var _tecla_esq = keyboard_check(ord("A")) or keyboard_check(vk_left);
+	var _tecla_dir = keyboard_check(ord("D")) or keyboard_check(vk_right);
+	var _tecla_dash =  keyboard_check(ord("Z")) or keyboard_check(vk_shift);
+	var _tecla_atk =  keyboard_check(ord("X")) or keyboard_check(ord("E"));
+
+	var _tecla_x = _tecla_dir -_tecla_esq;
+	var _tecla_y = _tecla_baixo - _tecla_cima;
+
+	 if _tecla_x != 0 or _tecla_y != 0{
+		 sprite_index = spr_player_andando
+
+		dir = point_direction(0,0,_tecla_x,_tecla_y);
+		velh = lengthdir_x(veloc,dir);
+		velv = lengthdir_y(veloc,dir);
+	
+	scr_personagem_colisao();
+
 	 }else{
 		 sprite_index = spr_player_parado
 	 }
@@ -40,15 +53,47 @@ function scr_personagem_andando(){
 		estado = scr_pers_dash;
 	 
 	 }
+	 
+	if (_tecla_atk){
+		//Se apertar X, o sprite de ataque muda conforme a direcao do player
+		image_index = 0;
+		switch dir{
+				//Ataque direita
+			default:
+				sprite_index = spr_pers_atk_direita;
+			break;
+				//Ataque baixo
+			case 1:
+				sprite_index = spr_pers_atk_baixo;
+			break;
+
+				//Ataque esquerda
+			case 2:
+				sprite_index = spr_pers_atk_esq;
+			break;
+	
+				//Ataque cima
+			case 3:
+				sprite_index = spr_pers_atk_cima;
+			break;
+
+		}
+
+		estado = scr_atk_pers;
+
+	}
 }
 
+#endregion
+
+
+#region DASH
 function scr_pers_dash(){
 	
 	velv = lengthdir_y(dash_veloc,dash_dir);
 	velh = lengthdir_x(dash_veloc,dash_dir);
 	
-	x += velh;
-	y += velv;
+	scr_personagem_colisao();
 	
 	var _inst = instance_create_layer(x,y,"Instances_1", obj_dash);
 	_inst.sprite_index = sprite_index;
@@ -62,3 +107,41 @@ function scr_pers_dash(){
 		estado = scr_personagem_andando;
 	}
 }
+#endregion
+
+
+
+function scr_atk_pers(){
+	
+	//Funcao definindo direcao do ataque
+	if image_index >= 1{
+		if ataque == false{
+			switch dir{
+					//Ataque direita
+				default:
+					instance_create_layer(x + 10, y, "Instances_1",obj_pers_hitbox);	
+				break;
+					//Ataque baixo
+				case 1:
+					instance_create_layer(x, y + 10, "Instances_1",obj_pers_hitbox);
+				break;
+					//Ataque esquerda
+				case 2:
+					instance_create_layer(x - 10, y, "Instances_1",obj_pers_hitbox);
+				break;
+					//Ataque cima
+				case 3:
+					instance_create_layer(x, y - 10, "Instances_1",obj_pers_hitbox);
+				break;			
+			}
+		
+			ataque = true;
+		}
+		//Evitar que o personagem fique atacando infinitamente
+		if (image_index > image_number - 1){
+			estado = scr_personagem_andando;
+			ataque = false;
+		}
+	}
+}
+

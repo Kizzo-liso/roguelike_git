@@ -18,3 +18,8 @@ dash_veloc = 8;
 
 //Estado
 estado = scr_personagem_andando;
+
+//Combate
+
+dano = 1;
+ataque = false;
