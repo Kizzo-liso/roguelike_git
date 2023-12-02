@@ -1,10 +1,6 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 
-velh = -1;
-velv = -1;
-dir = -1;
 
-veloc = 1.5;
 
-vida = 3;
+other.vida -= obj_player.dano; 

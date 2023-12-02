@@ -20,6 +20,6 @@ dash_veloc = 8;
 estado = scr_personagem_andando;
 
 //Combate
-
+atk_dir = 0;
 dano = 1;
 ataque = false;

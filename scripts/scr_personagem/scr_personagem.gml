@@ -55,32 +55,24 @@ function scr_personagem_andando(){
 	 }
 	 
 	if (_tecla_atk){
-		//Se apertar X, o sprite de ataque muda conforme a direcao do player
 		image_index = 0;
-		switch dir{
-				//Ataque direita
-			default:
+		atk_dir = point_direction(0,0,_tecla_x,_tecla_y);
+
+		switch(round(dir / 90) mod 4) {
+			case 0:
 				sprite_index = spr_pers_atk_direita;
-			break;
-				//Ataque baixo
+            break;
 			case 1:
 				sprite_index = spr_pers_atk_baixo;
-			break;
-
-				//Ataque esquerda
+            break;
 			case 2:
 				sprite_index = spr_pers_atk_esq;
-			break;
-	
-				//Ataque cima
+            break;
 			case 3:
 				sprite_index = spr_pers_atk_cima;
-			break;
-
-		}
-
-		estado = scr_atk_pers;
-
+            break;
+    }
+	estado = scr_atk_pers;
 	}
 }
 
@@ -112,36 +104,28 @@ function scr_pers_dash(){
 
 
 function scr_atk_pers(){
-	
-	//Funcao definindo direcao do ataque
 	if image_index >= 1{
 		if ataque == false{
-			switch dir{
-					//Ataque direita
+			switch(round(dir / 90) mod 4){
 				default:
-					instance_create_layer(x + 10, y, "Instances_1",obj_pers_hitbox);	
+					instance_create_layer(x + 45,y,"Instances_1",obj_pers_hitbox);
 				break;
-					//Ataque baixo
 				case 1:
-					instance_create_layer(x, y + 10, "Instances_1",obj_pers_hitbox);
+					instance_create_layer(x,y - 45,"Instances_1",obj_pers_hitbox);
 				break;
-					//Ataque esquerda
 				case 2:
-					instance_create_layer(x - 10, y, "Instances_1",obj_pers_hitbox);
+					instance_create_layer(x - 45,y,"Instances_1",obj_pers_hitbox);
 				break;
-					//Ataque cima
 				case 3:
-					instance_create_layer(x, y - 10, "Instances_1",obj_pers_hitbox);
-				break;			
+					instance_create_layer(x,y + 45,"Instances_1",obj_pers_hitbox);
+				break;
 			}
-		
-			ataque = true;
+		ataque = true;
 		}
-		//Evitar que o personagem fique atacando infinitamente
-		if (image_index > image_number - 1){
-			estado = scr_personagem_andando;
-			ataque = false;
-		}
+	}
+	if (image_index >= image_number -1){
+		estado = scr_personagem_andando;
+		ataque = false;
 	}
 }
 

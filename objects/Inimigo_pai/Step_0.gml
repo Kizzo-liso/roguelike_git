@@ -1,4 +1,8 @@
+if vida <= 0{
 
+instance_destroy();
+
+}
 
 
 var _borda = 64;
