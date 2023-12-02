@@ -28,7 +28,6 @@ function scr_personagem_andando(){
 	var _tecla_dir = keyboard_check(ord("D")) or keyboard_check(vk_right);
 	var _tecla_dash =  keyboard_check(ord("Z")) or keyboard_check(vk_shift);
 	var _tecla_atk =  keyboard_check(ord("X")) or keyboard_check(ord("E"));
-
 	var _tecla_x = _tecla_dir -_tecla_esq;
 	var _tecla_y = _tecla_baixo - _tecla_cima;
 
