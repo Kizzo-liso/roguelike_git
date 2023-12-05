@@ -53,7 +53,9 @@ function scr_personagem_andando(){
 	 
 	 }
 	 
-	if (_tecla_atk){
+	if (_tecla_atk and pode_atk){
+		pode_atk = false;
+		alarm[1] = atk_delay;
 		image_index = 0;
 		atk_dir = point_direction(0,0,_tecla_x,_tecla_y);
 
@@ -107,16 +109,16 @@ function scr_atk_pers(){
 		if ataque == false{
 			switch(round(dir / 90) mod 4){
 				default:
-					instance_create_layer(x + 45,y,"Instances_1",obj_pers_hitbox);
+					instance_create_layer(x + 48,y,"Instances_1",obj_pers_hitbox);
 				break;
 				case 1:
-					instance_create_layer(x,y - 45,"Instances_1",obj_pers_hitbox);
+					instance_create_layer(x,y - 48,"Instances_1",obj_pers_hitbox);
 				break;
 				case 2:
-					instance_create_layer(x - 45,y,"Instances_1",obj_pers_hitbox);
+					instance_create_layer(x - 48,y,"Instances_1",obj_pers_hitbox);
 				break;
 				case 3:
-					instance_create_layer(x,y + 45,"Instances_1",obj_pers_hitbox);
+					instance_create_layer(x,y + 48,"Instances_1",obj_pers_hitbox);
 				break;
 			}
 		ataque = true;

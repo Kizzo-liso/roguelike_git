@@ -5,6 +5,8 @@ velh = -1;
 velv = -1;
 dir = -1;
 
-veloc = 1.5;
+veloc = 1.0;
 
-vida = 3;
+vida = 30;
+
+estado = scr_inimigo_perseguindo;

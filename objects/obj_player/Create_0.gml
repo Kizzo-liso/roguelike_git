@@ -21,9 +21,17 @@ estado = scr_personagem_andando;
 
 //Combate
 atk_dir = 0;
-dano = 1;
+dano = 10;
 ataque = false;
+atk_delay = 20;
+pode_atk = true;
 
+//Coleta de XP
+
+range_coleta = 102;
+
+
+//Controles Mobile
 l = virtual_key_add(300,690,100,100,vk_up)
 esq = virtual_key_add(190,800,100,100,vk_left)
 dire = virtual_key_add(410,800,100,100,vk_right)

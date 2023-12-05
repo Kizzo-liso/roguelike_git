@@ -23,3 +23,18 @@ if alarm[0] <= 0{
 	
 	alarm[0] = spawn_timer;
 }
+
+//Barra de XP e LevelUPS
+if global.exp >= global.exp_max{
+	//level aumenta em +1.
+	global.level++;
+	
+	//Jogador obtem levelup
+	global.levelup = true;
+	
+	//reseta o valor da barra de xp
+	global.exp = global.exp - global.exp_max;
+	
+	//aumenta o valor da barra de XP (temporario)
+	global.exp_max += 20;
+}
