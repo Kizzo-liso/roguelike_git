@@ -11,3 +11,8 @@ global.exp = 0;
 global.exp_max = 100;
 global.level = 1;
 global.levelup = false;
+
+
+/*controles*/
+
+display_set_gui_size(1920,1080)

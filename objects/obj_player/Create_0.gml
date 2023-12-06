@@ -32,10 +32,24 @@ range_coleta = 102;
 
 
 //Controles Mobile
-l = virtual_key_add(300,690,100,100,vk_up)
-esq = virtual_key_add(190,800,100,100,vk_left)
-dire = virtual_key_add(410,800,100,100,vk_right)
-b = virtual_key_add(300,910,100,100,vk_down)
+//diagonais
+//esquer cima
+lws = virtual_key_add(170, 590,120,120,vk_left);
+lw = virtual_key_add(170, 590, 120,120,vk_up);
+//esqbaixo
+
+sqs = virtual_key_add(170, 890,120,120,vk_left);
+sqb = virtual_key_add(170, 890,120,120,vk_down);
+
+cd = virtual_key_add(450, 590, 120,120,vk_up);
+cd = virtual_key_add(450, 590, 120,120,vk_right);
+
+db = virtual_key_add(450, 890, 120,120,vk_up);
+
+l = virtual_key_add(300,580,140,140,vk_up)
+esq = virtual_key_add(150,730,140,140,vk_left)
+dire = virtual_key_add(460,730,140,140,vk_right)
+b = virtual_key_add(300,890,140,140,vk_down)
 das = virtual_key_add(1500,910,100,100,vk_shift)
 atk = virtual_key_add(1700,850,100,100,ord("X"))
 display_set_gui_size(1920,1080)
