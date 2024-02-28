@@ -46,6 +46,7 @@
     {"name":"spr_tile_plantas","order":3,"path":"sprites/spr_tile_plantas/spr_tile_plantas.yy",},
     {"name":"spr_player_andando","order":4,"path":"sprites/spr_player_andando/spr_player_andando.yy",},
     {"name":"spr_tile_chao_pedra","order":6,"path":"sprites/spr_tile_chao_pedra/spr_tile_chao_pedra.yy",},
+    {"name":"spr_teste","order":19,"path":"sprites/spr_teste/spr_teste.yy",},
     {"name":"tile_structures","order":4,"path":"tilesets/tile_structures/tile_structures.yy",},
     {"name":"spr_barra_xp","order":1,"path":"sprites/spr_barra_xp/spr_barra_xp.yy",},
     {"name":"obj_pers_hitbox","order":8,"path":"objects/obj_pers_hitbox/obj_pers_hitbox.yy",},
