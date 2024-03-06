@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_hud_xp",
-  "bbox_bottom": 4,
+  "bbox_bottom": 19,
   "bbox_left": 0,
-  "bbox_right": 85,
+  "bbox_right": 343,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 5,
+  "height": 20,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b62c9287-92dc-4730-9b9d-4d7f18510436","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 86,
+  "width": 344,
 }

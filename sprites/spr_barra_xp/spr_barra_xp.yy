@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_barra_xp",
-  "bbox_bottom": 2,
+  "bbox_bottom": 11,
   "bbox_left": 0,
-  "bbox_right": 83,
+  "bbox_right": 335,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 3,
+  "height": 12,
   "HTile": true,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"cae6dfff-e1cb-4ab8-992d-810d78b9fb41","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -93,5 +93,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 84,
+  "width": 336,
 }

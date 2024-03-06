@@ -1,4 +1,4 @@
-
+ 
 var _side = irandom(1);
 
 if alarm[0] <= 0{

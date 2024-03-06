@@ -1,6 +1,6 @@
 //Definindo de maneira aleatoria o spawn dos inimigos
 randomize();
-spawn_timer = 300;
+spawn_timer = 600;
 
 //Definindo altura e largura do Draw GUI
 display_set_gui_size(480,270);

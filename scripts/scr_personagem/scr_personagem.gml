@@ -61,15 +61,17 @@ function scr_personagem_andando(){
 
 		switch(round(dir / 90) mod 4) {
 			case 0:
-				sprite_index = spr_pers_atk_direita;
+				sprite_index = spr_pers_atk_esq;	
             break;
 			case 1:
 				sprite_index = spr_pers_atk_baixo;
             break;
 			case 2:
-				sprite_index = spr_pers_atk_esq;
+
+				sprite_index = spr_pers_atk_direita;
             break;
 			case 3:
+				
 				sprite_index = spr_pers_atk_cima;
             break;
     }
@@ -109,16 +111,16 @@ function scr_atk_pers(){
 		if ataque == false{
 			switch(round(dir / 90) mod 4){
 				default:
-					instance_create_layer(x + 48,y,"Instances_1",obj_pers_hitbox);
+					instance_create_layer(x - 24,y,"Instances_1",obj_pers_hitbox);
 				break;
 				case 1:
-					instance_create_layer(x,y - 48,"Instances_1",obj_pers_hitbox);
+					instance_create_layer(x,y + 24,"Instances_1",obj_pers_hitbox);
 				break;
 				case 2:
-					instance_create_layer(x - 48,y,"Instances_1",obj_pers_hitbox);
+					instance_create_layer(x + 24,y,"Instances_1",obj_pers_hitbox);
 				break;
 				case 3:
-					instance_create_layer(x,y + 48,"Instances_1",obj_pers_hitbox);
+					instance_create_layer(x,y - 24,"Instances_1",obj_pers_hitbox);
 				break;
 			}
 		ataque = true;
