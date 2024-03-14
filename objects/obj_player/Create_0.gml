@@ -29,7 +29,7 @@ pode_atk = true;
 //Coleta de XP
 
 range_coleta = 102;
-
+/*
 
 //Controles Mobile
 //diagonais
@@ -52,4 +52,5 @@ dire = virtual_key_add(460,730,140,140,vk_right)
 b = virtual_key_add(300,890,140,140,vk_down)
 das = virtual_key_add(1500,910,100,100,vk_shift)
 atk = virtual_key_add(1700,850,100,100,ord("X"))
+*/
 display_set_gui_size(1920,1080)
