@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_inimigo1",
-    "path": "sprites/spr_inimigo1/spr_inimigo1.yy",
+    "name": "javali_spr_atk_cima",
+    "path": "sprites/javali_spr_atk_cima/javali_spr_atk_cima.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -27,7 +27,7 @@ function scr_personagem_andando(){
 	var _tecla_esq = keyboard_check(ord("A")) or keyboard_check(vk_left);
 	var _tecla_dir = keyboard_check(ord("D")) or keyboard_check(vk_right);
 	var _tecla_dash =  keyboard_check(ord("Z")) or keyboard_check(vk_shift);
-	var _tecla_atk =  keyboard_check(ord("X")) or keyboard_check(ord("E"));
+	var _tecla_atk = mouse_check_button_pressed(mb_left);
 	var _tecla_x = _tecla_dir -_tecla_esq;
 	var _tecla_y = _tecla_baixo - _tecla_cima;
 
@@ -59,20 +59,20 @@ function scr_personagem_andando(){
 		image_index = 0;
 		atk_dir = point_direction(0,0,_tecla_x,_tecla_y);
 
-		switch(round(dir / 90) mod 4) {
+		switch dir{
 			case 0:
-				sprite_index = spr_pers_atk_esq;	
+				sprite_index = spr_pers_atk_direita;	
             break;
 			case 1:
-				sprite_index = spr_pers_atk_baixo;
+				sprite_index = spr_pers_atk_cima;
             break;
 			case 2:
 
-				sprite_index = spr_pers_atk_direita;
+				sprite_index = spr_pers_atk_esq;
             break;
 			case 3:
 				
-				sprite_index = spr_pers_atk_cima;
+				sprite_index = spr_pers_atk_baixo;
             break;
     }
 	estado = scr_atk_pers;
@@ -109,7 +109,7 @@ function scr_pers_dash(){
 function scr_atk_pers(){
 	if image_index >= 1{
 		if ataque == false{
-			switch(round(dir / 90) mod 4){
+			switch dir{
 				default:
 					instance_create_layer(x - 24,y,"Instances_1",obj_pers_hitbox);
 				break;

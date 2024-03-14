@@ -5,6 +5,7 @@ dir = 0;
 veloc = 4.0;
 
 
+
 //Dash
 
 dash = true;
@@ -14,6 +15,9 @@ dash_dir = 0;
 dash_distancia = 20;
 dash_duracao = 5;
 dash_veloc = 8;
+
+//hp
+life = 100
 
 
 //Estado
