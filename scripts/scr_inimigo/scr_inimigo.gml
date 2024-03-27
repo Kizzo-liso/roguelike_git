@@ -1,4 +1,6 @@
 // Os recursos de script mudaram para a v2.3.0; veja
+
+#region COLISAO
 function scr_inimigo_colisao(){
 
 		if(place_meeting(x+velh,y,OBJ_colisor)){
@@ -14,7 +16,9 @@ function scr_inimigo_colisao(){
 		y += velv;
 
 }
+#endregion
 
+#region INIMIGO PERSEGUINDO
 function scr_inimigo_perseguindo(){
 
 	var _borda = 64;
@@ -48,6 +52,17 @@ function scr_inimigo_perseguindo(){
 	dir = point_direction(x,y,obj_player.x,obj_player.y); // inimigo vai perseguir o player
 	velv = lengthdir_y(veloc, dir);
 	velh = lengthdir_x(veloc, dir);
+	
+	// Define a sprite do inimigo com base na direção
+if (abs(dir) < 45 || abs(dir) > 315) { // para a direção para cima
+    sprite_index = javali_spr_walk_dir;
+} else if (dir > 45 && dir < 135) { // para a direção para a direita
+    sprite_index = javali_spr_walk_cima;
+} else if (dir > 135 && dir < 225) { // para a direção para baixo
+    sprite_index = javali_spr_walk_esq;
+} else { // para a direção para a esquerda
+    sprite_index = javali_spr_walk_baixo;
+}
 
 	scr_inimigo_colisao();
 	//
@@ -72,3 +87,14 @@ function scr_inimigo_perseguindo(){
 }
 
 }
+#endregion
+
+function scr_inimigo_hit(){
+	//perder velocidade do empurrao
+	empurrar_vel = lerp(empurrar_vel, 0 , 0.2)
+	
+	hvel = lengthdir_x(empurrar_vel, empurrar_dir);
+	vvel = lengthdir_y(empurrar_vel,empurrar_dir);
+	
+	scr_inimigo_colisao();
+} 

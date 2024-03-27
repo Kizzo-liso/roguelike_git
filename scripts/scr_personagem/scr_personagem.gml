@@ -27,7 +27,7 @@ function scr_personagem_andando(){
 	var _tecla_esq = keyboard_check(ord("A")) or keyboard_check(vk_left);
 	var _tecla_dir = keyboard_check(ord("D")) or keyboard_check(vk_right);
 	var _tecla_dash =  keyboard_check(ord("Z")) or keyboard_check(vk_shift);
-	var _tecla_atk = mouse_check_button_pressed(mb_left);
+	var _tecla_atk = keyboard_check(ord("X"));
 	var _tecla_x = _tecla_dir -_tecla_esq;
 	var _tecla_y = _tecla_baixo - _tecla_cima;
 
@@ -63,15 +63,14 @@ function scr_personagem_andando(){
 			case 0:
 				sprite_index = spr_pers_atk_direita;	
             break;
-			case 1:
+			case 90:
 				sprite_index = spr_pers_atk_cima;
             break;
-			case 2:
+			case 180:
 
 				sprite_index = spr_pers_atk_esq;
             break;
-			case 3:
-				
+			case 270:
 				sprite_index = spr_pers_atk_baixo;
             break;
     }
@@ -84,6 +83,7 @@ function scr_personagem_andando(){
 
 #region DASH
 function scr_pers_dash(){
+	tomardano = false;
 	
 	velv = lengthdir_y(dash_veloc,dash_dir);
 	velh = lengthdir_x(dash_veloc,dash_dir);
@@ -105,22 +105,22 @@ function scr_pers_dash(){
 #endregion
 
 
-
+#region ATK
 function scr_atk_pers(){
 	if image_index >= 1{
 		if ataque == false{
 			switch dir{
-				default:
-					instance_create_layer(x - 24,y,"Instances_1",obj_pers_hitbox);
-				break;
-				case 1:
-					instance_create_layer(x,y + 24,"Instances_1",obj_pers_hitbox);
-				break;
-				case 2:
+				case 0:
 					instance_create_layer(x + 24,y,"Instances_1",obj_pers_hitbox);
 				break;
-				case 3:
+				case 90:
 					instance_create_layer(x,y - 24,"Instances_1",obj_pers_hitbox);
+				break;
+				case 180:
+					instance_create_layer(x - 24,y,"Instances_1",obj_pers_hitbox);
+				break;
+				case 270:
+					instance_create_layer(x,y + 24,"Instances_1",obj_pers_hitbox);
 				break;
 			}
 		ataque = true;
@@ -131,4 +131,20 @@ function scr_atk_pers(){
 		ataque = false;
 	}
 }
+#endregion
 
+#region DANO TOMADO
+function scr_pers_hit(){
+	//perder velocidade do empurrao
+	if alarm[2] > 0{
+	
+	hvel = lengthdir_x(3, empurrar_dir);
+	vvel = lengthdir_y(3,empurrar_dir);
+	
+	scr_personagem_colisao();
+	}else{
+	
+		estado = scr_personagem_andando;
+	}
+}
+#endregion

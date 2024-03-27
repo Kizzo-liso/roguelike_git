@@ -16,9 +16,11 @@ dash_distancia = 20;
 dash_duracao = 5;
 dash_veloc = 8;
 
-//hp
-life = 100
-
+//vida do personagem
+hp_max = 100;
+hp = hp_max;
+tomardano = true;
+empurrar_dir = 0;
 
 //Estado
 estado = scr_personagem_andando;
@@ -29,10 +31,13 @@ dano = 10;
 ataque = false;
 atk_delay = 20;
 pode_atk = true;
+dano_alfa = -1;	
 
 //Coleta de XP
 
 range_coleta = 102;
+
+
 
 
 //Controles Mobile
