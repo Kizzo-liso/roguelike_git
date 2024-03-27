@@ -33,7 +33,7 @@ pode_atk = true;
 //Coleta de XP
 
 range_coleta = 102;
-/*
+
 
 //Controles Mobile
 //diagonais
@@ -48,7 +48,8 @@ sqb = virtual_key_add(170, 890,120,120,vk_down);
 cd = virtual_key_add(450, 590, 120,120,vk_up);
 cd = virtual_key_add(450, 590, 120,120,vk_right);
 
-db = virtual_key_add(450, 890, 120,120,vk_up);
+db = virtual_key_add(450, 890, 120,120,vk_down);
+dbs = virtual_key_add(450, 890, 120,120,vk_right)
 
 l = virtual_key_add(300,580,140,140,vk_up)
 esq = virtual_key_add(150,730,140,140,vk_left)
@@ -56,5 +57,5 @@ dire = virtual_key_add(460,730,140,140,vk_right)
 b = virtual_key_add(300,890,140,140,vk_down)
 das = virtual_key_add(1500,910,100,100,vk_shift)
 atk = virtual_key_add(1700,850,100,100,ord("X"))
-*/
+
 display_set_gui_size(1920,1080)
