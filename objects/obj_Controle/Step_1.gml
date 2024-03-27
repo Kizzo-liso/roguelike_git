@@ -1,7 +1,9 @@
+/// @description Inserir descrição aqui
+// Você pode escrever seu código neste editor
 /// @description Insert description here
 // You can write your code in this editor
 
-/*
+
 var _max_devices = 4;
 
 for (var i = 0; i < _max_devices; i++)
@@ -17,4 +19,7 @@ for (var i = 0; i < _max_devices; i++)
 		_ui_at_pos.input(i, _mouse_x, _mouse_y);
 	}
 }
-*/
+
+
+
+
