@@ -21,7 +21,7 @@ function scr_inimigo_colisao(){
 #region INIMIGO PERSEGUINDO
 function scr_inimigo_perseguindo(){
 
-	var _borda = 64;
+	var _borda = 32;
 
 	//inimigo vai spawnar fora da camera, se sair dela, spawna no lado oposto(vertical)
 
@@ -48,23 +48,24 @@ function scr_inimigo_perseguindo(){
 		x = global.cmx - _borda;
 
 	}
-
+	scr_inimigo_colisao();
+	
 	dir = point_direction(x,y,obj_player.x,obj_player.y); // inimigo vai perseguir o player
 	velv = lengthdir_y(veloc, dir);
 	velh = lengthdir_x(veloc, dir);
 	
 	// Define a sprite do inimigo com base na direção
-if (abs(dir) < 45 || abs(dir) > 315) { // para a direção para cima
-    sprite_index = javali_spr_walk_dir;
-} else if (dir > 45 && dir < 135) { // para a direção para a direita
-    sprite_index = javali_spr_walk_cima;
-} else if (dir > 135 && dir < 225) { // para a direção para baixo
-    sprite_index = javali_spr_walk_esq;
-} else { // para a direção para a esquerda
-    sprite_index = javali_spr_walk_baixo;
-}
+	if (abs(dir) < 45 || abs(dir) > 315) { // para a direção para cima
+	    sprite_index = javali_spr_walk_dir;
+	} else if (dir > 45 && dir < 135) { // para a direção para a direita
+	    sprite_index = javali_spr_walk_cima;
+	} else if (dir > 135 && dir < 225) { // para a direção para baixo
+	    sprite_index = javali_spr_walk_esq;
+	} else { // para a direção para a esquerda
+	    sprite_index = javali_spr_walk_baixo;
+	}
 
-	scr_inimigo_colisao();
+	
 	//
 
 

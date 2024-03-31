@@ -111,16 +111,16 @@ function scr_atk_pers(){
 		if ataque == false{
 			switch dir{
 				case 0:
-					instance_create_layer(x + 24,y,"Instances_1",obj_pers_hitbox);
+					instance_create_layer(x + 15,y,"Instances_1",obj_pers_hitbox);
 				break;
 				case 90:
-					instance_create_layer(x,y - 24,"Instances_1",obj_pers_hitbox);
+					instance_create_layer(x,y - 15,"Instances_1",obj_pers_hitbox);
 				break;
 				case 180:
-					instance_create_layer(x - 24,y,"Instances_1",obj_pers_hitbox);
+					instance_create_layer(x - 15,y,"Instances_1",obj_pers_hitbox);
 				break;
 				case 270:
-					instance_create_layer(x,y + 24,"Instances_1",obj_pers_hitbox);
+					instance_create_layer(x,y + 15,"Instances_1",obj_pers_hitbox);
 				break;
 			}
 		ataque = true;
