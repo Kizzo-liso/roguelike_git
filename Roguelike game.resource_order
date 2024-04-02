@@ -1,4 +1,17 @@
 {
-  "FolderOrderSettings":[],
-  "ResourceOrderSettings":[],
+  "FolderOrderSettings":[
+    {"name":"menu","order":2,"path":"folders/Objetos/menu.yy",},
+    {"name":"btns","order":1,"path":"folders/Sprites/btns.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"obj_menu_conqs","order":3,"path":"objects/obj_menu_conqs/obj_menu_conqs.yy",},
+    {"name":"obj_menu_cred","order":2,"path":"objects/obj_menu_cred/obj_menu_cred.yy",},
+    {"name":"obj_menu_sair","order":1,"path":"objects/obj_menu_sair/obj_menu_sair.yy",},
+    {"name":"obj_name","order":4,"path":"objects/obj_name/obj_name.yy",},
+    {"name":"rm_inicio","order":1,"path":"rooms/rm_inicio/rm_inicio.yy",},
+    {"name":"spr_bntcred","order":2,"path":"sprites/spr_bntcred/spr_bntcred.yy",},
+    {"name":"spr_btnconqs","order":3,"path":"sprites/spr_btnconqs/spr_btnconqs.yy",},
+    {"name":"spr_btsair","order":1,"path":"sprites/spr_btsair/spr_btsair.yy",},
+    {"name":"spr_title","order":4,"path":"sprites/spr_title/spr_title.yy",},
+  ],
 }
