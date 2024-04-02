@@ -20,7 +20,7 @@ function scr_inimigo_colisao(){
 
 #region INIMIGO PERSEGUINDO
 function scr_inimigo_perseguindo(){
-
+/*
 	var _borda = 32;
 
 	//inimigo vai spawnar fora da camera, se sair dela, spawna no lado oposto(vertical)
@@ -47,7 +47,7 @@ function scr_inimigo_perseguindo(){
 
 		x = global.cmx - _borda;
 
-	}
+	}*/
 	scr_inimigo_colisao();
 	
 	dir = point_direction(x,y,obj_player.x,obj_player.y); // inimigo vai perseguir o player

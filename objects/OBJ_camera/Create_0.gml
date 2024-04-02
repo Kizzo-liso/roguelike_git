@@ -1,5 +1,5 @@
 
-/*window_set_fullscreen(true);*/
+window_set_fullscreen(true);
 
 cam = view_camera[0]; //Escolhendo viewpoint pra ser a camera
 follow = obj_player; //Quem a camera vai seguir

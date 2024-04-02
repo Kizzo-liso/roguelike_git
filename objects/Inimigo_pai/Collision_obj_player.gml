@@ -1,7 +1,7 @@
 /// @description Inserir descrição aqui
 if other.tomardano == true{
 
-	var _dir = point_direction(x,y,x+3,y+3);
+	var _dir = point_direction(x,y,other.x,other.y);
 
 
 	other.empurrar_dir = _dir;
@@ -12,3 +12,4 @@ if other.tomardano == true{
 	other.hp -= 10;
 	
 }
+ 
