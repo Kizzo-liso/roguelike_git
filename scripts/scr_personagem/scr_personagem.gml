@@ -27,21 +27,22 @@ function scr_personagem_andando(){
 	var _tecla_esq = keyboard_check(ord("A")) or keyboard_check(vk_left);
 	var _tecla_dir = keyboard_check(ord("D")) or keyboard_check(vk_right);
 	var _tecla_dash =  keyboard_check(ord("Z")) or keyboard_check(vk_shift);
-	var _tecla_atk = keyboard_check(ord("X"));
+	//var _tecla_atk = mouse_check_button(mb_left);
+	var _tecla_atk = keyboard_check(ord("X")); 
 	var _tecla_x = _tecla_dir -_tecla_esq;
 	var _tecla_y = _tecla_baixo - _tecla_cima;
 
 	 if _tecla_x != 0 or _tecla_y != 0{
 		 sprite_index = spr_player_andando
 
-		dir = point_direction(0,0,_tecla_x,_tecla_y);
+		dir = (point_direction(0,0,_tecla_x,_tecla_y));
 		velh = lengthdir_x(veloc,dir);
 		velv = lengthdir_y(veloc,dir);
 	
 	scr_personagem_colisao();
 
 	 }else{
-		 sprite_index = spr_player_parado
+		 sprite_index = spr_player_parado;
 	 }
 	if (_tecla_dash and dash and pode_dash){
 		pode_dash = false;
@@ -57,8 +58,11 @@ function scr_personagem_andando(){
 		pode_atk = false;
 		alarm[1] = atk_delay;
 		image_index = 0;
-		atk_dir = point_direction(0,0,_tecla_x,_tecla_y);
-
+		/*SE FOR USAR O MOUSE COMO ATAQUE, SUBSTITUI OS CASES PRA 0,1,2,3
+		e a variavel DIR para ATK_DIR*/
+		
+		//atk_dir = floor(point_direction(x,y,mouse_x,mouse_y)/90);
+		
 		switch dir{
 			case 0:
 				sprite_index = spr_pers_atk_direita;	
@@ -67,7 +71,6 @@ function scr_personagem_andando(){
 				sprite_index = spr_pers_atk_cima;
             break;
 			case 180:
-
 				sprite_index = spr_pers_atk_esq;
             break;
 			case 270:
