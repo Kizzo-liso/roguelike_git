@@ -1,5 +1,6 @@
 script_execute(estado);
-
+scr_pers_die();
+/*
 var _move_x = 0;
 var _move_y = 0;
 
@@ -11,3 +12,4 @@ with (obj_joy)
 
 x += _move_x * veloc;
 y += _move_y * veloc;
+*/

@@ -151,3 +151,13 @@ function scr_pers_hit(){
 	}
 }
 #endregion
+#region MORRER
+	function scr_pers_die(){
+	if hp <= 0{
+		room_restart()
+		room_goto(rm_lostgame)
+		
+	}
+	
+	}
+#endregion
