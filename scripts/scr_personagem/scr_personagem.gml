@@ -58,6 +58,7 @@ function scr_personagem_andando(){
 		pode_atk = false;
 		alarm[1] = atk_delay;
 		image_index = 0;
+		
 		/*SE FOR USAR O MOUSE COMO ATAQUE, SUBSTITUI OS CASES PRA 0,1,2,3
 		e a variavel DIR para ATK_DIR*/
 		
@@ -115,15 +116,19 @@ function scr_atk_pers(){
 			switch dir{
 				case 0:
 					instance_create_layer(x + 15,y,"Instances_1",obj_pers_hitbox);
+					audio_play_sound(snd_slash,0,false);
 				break;
 				case 90:
 					instance_create_layer(x,y - 15,"Instances_1",obj_pers_hitbox);
+					audio_play_sound(snd_slash,0,false);
 				break;
 				case 180:
 					instance_create_layer(x - 15,y,"Instances_1",obj_pers_hitbox);
+					audio_play_sound(snd_slash,0,false);
 				break;
 				case 270:
 					instance_create_layer(x,y + 15,"Instances_1",obj_pers_hitbox);
+					audio_play_sound(snd_slash,0,false);
 				break;
 			}
 		ataque = true;
